@@ -69,7 +69,7 @@ public class GameOfLife {
 		In in = new In(fileName); // Constructs an In object for reading the input file
 		int rows = Integer.parseInt(in.readLine());
 		int cols = Integer.parseInt(in.readLine());
-		int[][] board = new int[rows + 2][cols + 2];
+		int[][] board = new int[rows ][cols ];
 		//// Replace the following statement with your code.
 
 		for (int i = 1; i < rows + 1; i++) {
