@@ -18,14 +18,14 @@ public class GameOfLife {
 	}
 
 	// Reads the data file and prints the initial board.
-	public static void test1(String fileName) {
+	private static void test1(String fileName) {
 		int[][] board = read(fileName);
 		print(board);
 	}
 
 	// Reads the data file, and runs a test that checks 
 	// the count and cellValue functions.
-	public static void test2(String fileName) {
+	private static void test2(String fileName) {
 		int[][] board = read(fileName);
 		//// Write here code that tests that the count and cellValue functions
 		//// are working properly, and returning the correct values.
@@ -40,7 +40,7 @@ public class GameOfLife {
 
 	// Reads the data file, plays the game for Ngen generations, 
 	// and prints the board at the beginning of each generation.
-	public static void test3(String fileName, int Ngen) {
+	private static void test3(String fileName, int Ngen) {
 		int[][] board = read(fileName);
 		for (int gen = 0; gen < Ngen; gen++) {
 			System.out.println("Generation " + gen + ":");
@@ -69,10 +69,10 @@ public class GameOfLife {
 		In in = new In(fileName); // Constructs an In object for reading the input file
 		int rows = Integer.parseInt(in.readLine());
 		int cols = Integer.parseInt(in.readLine());
-		int[][] board = new int[rows ][cols ];
+		int[][] board = new int[rows +2][cols\+2 ];
 		//// Replace the following statement with your code.
 
-		for (int i = 1; i < rows -1; i++) {
+		for (int i = 1; i < rows +1; i++) {
 			String str = in.readLine();
 			for (int j = 1; j < str.length() + 1; j++) {
 				if (str.charAt(j - 1) == 'x')
@@ -149,9 +149,10 @@ public class GameOfLife {
 		{
 			for (int j=0; j<m; j++)
 			{
-				System.out.printf ("%3s", arr[i][j]);
+				System.out.printf  ("  %d", arr[i][j]);
+
 			}
-			System.out.println();
+			System.out.println("%n");
 		}
 	}
 		
