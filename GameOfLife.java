@@ -143,16 +143,10 @@ public class GameOfLife {
 	// Prints the board. Alive and dead cells are printed as 1 and 0, respectively.
     public static void print(int[][] arr) {
 		//// Write your code here.
-		int n = arr.length;
-		int m = arr [0].length;
-		for (int i=0; i< n; i++)
-		{
-			for (int j=0; j<m; j++)
-			{
-				System.out.printf  ("  %d", arr[i][j]);
-
-			}
-			System.out.println("%n");
+		for(int i=1 ; i<arr.length-1 ; i++) {
+			for(int j=1 ; j<arr[0].length-1 ; j++)
+				System.out.printf("  %d", arr[i][j]);
+			System.out.printf("%n");
 		}
 	}
 		
