@@ -72,7 +72,7 @@ public class GameOfLife {
 		int[][] board = new int[rows ][cols ];
 		//// Replace the following statement with your code.
 
-		for (int i = 1; i < rows + 1; i++) {
+		for (int i = 1; i < rows -1; i++) {
 			String str = in.readLine();
 			for (int j = 1; j < str.length() + 1; j++) {
 				if (str.charAt(j - 1) == 'x')
